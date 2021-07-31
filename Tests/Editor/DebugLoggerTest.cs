@@ -7,11 +7,11 @@ namespace Lumpn.Logging
     [TestFixture]
     public sealed class DebugLoggerTest
     {
-        private static readonly object _message = "Message";
-        private static readonly Object _context = null;
-        private static readonly Exception _exception = new Exception("Exception");
-        private static readonly string _format = "{0}, {1}";
-        private static readonly object[] _args = { 1, 2 };
+        private static readonly object message = "Message";
+        private static readonly Object context = null;
+        private static readonly Exception exception = new Exception("Exception");
+        private static readonly string format = "{0}, {1}";
+        private static readonly object[] args = { 1, 2 };
 
         [SetUp]
         public void SetUp()
@@ -28,36 +28,36 @@ namespace Lumpn.Logging
         [Test]
         public void TestDebugLog()
         {
-            Debug.Log(_message);
-            Debug.Log(_message, _context);
+            Debug.Log(message);
+            Debug.Log(message, context);
 
-            Debug.LogWarning(_message);
-            Debug.LogWarning(_message, _context);
+            Debug.LogWarning(message);
+            Debug.LogWarning(message, context);
 
-            Debug.LogError(_message);
-            Debug.LogError(_message, _context);
+            Debug.LogError(message);
+            Debug.LogError(message, context);
 
-            Debug.LogException(_exception);
-            Debug.LogException(_exception, _context);
+            Debug.LogException(exception);
+            Debug.LogException(exception, context);
 
-            Debug.LogAssertion(_message);
-            Debug.LogAssertion(_message, _context);
+            Debug.LogAssertion(message);
+            Debug.LogAssertion(message, context);
         }
 
         [Test]
         public void TestDebugLogFormat()
         {
-            Debug.LogFormat(_format, _args);
-            Debug.LogFormat(_context, _format, _args);
+            Debug.LogFormat(format, args);
+            Debug.LogFormat(context, format, args);
 
-            Debug.LogWarningFormat(_format, _args);
-            Debug.LogWarningFormat(_context, _format, _args);
+            Debug.LogWarningFormat(format, args);
+            Debug.LogWarningFormat(context, format, args);
 
-            Debug.LogErrorFormat(_format, _args);
-            Debug.LogErrorFormat(_context, _format, _args);
+            Debug.LogErrorFormat(format, args);
+            Debug.LogErrorFormat(context, format, args);
 
-            Debug.LogAssertionFormat(_format, _args);
-            Debug.LogAssertionFormat(_context, _format, _args);
+            Debug.LogAssertionFormat(format, args);
+            Debug.LogAssertionFormat(context, format, args);
         }
 
         [Test]
@@ -65,20 +65,20 @@ namespace Lumpn.Logging
         {
             var debug = ScriptableObject.CreateInstance<DebugLogger>();
 
-            debug.Log(_message);
-            debug.Log(_message, _context);
+            debug.Log(message);
+            debug.Log(message, context);
 
-            debug.LogWarning(_message);
-            debug.LogWarning(_message, _context);
+            debug.LogWarning(message);
+            debug.LogWarning(message, context);
 
-            debug.LogError(_message);
-            debug.LogError(_message, _context);
+            debug.LogError(message);
+            debug.LogError(message, context);
 
-            debug.LogException(_exception);
-            debug.LogException(_exception, _context);
+            debug.LogException(exception);
+            debug.LogException(exception, context);
 
-            debug.LogAssertion(_message);
-            debug.LogAssertion(_message, _context);
+            debug.LogAssertion(message);
+            debug.LogAssertion(message, context);
 
             Object.DestroyImmediate(debug);
         }
@@ -88,17 +88,17 @@ namespace Lumpn.Logging
         {
             var debug = ScriptableObject.CreateInstance<DebugLogger>();
 
-            debug.LogFormat(_format, _args);
-            debug.LogFormat(_context, _format, _args);
+            debug.LogFormat(format, args);
+            debug.LogFormat(context, format, args);
 
-            debug.LogWarningFormat(_format, _args);
-            debug.LogWarningFormat(_context, _format, _args);
+            debug.LogWarningFormat(format, args);
+            debug.LogWarningFormat(context, format, args);
 
-            debug.LogErrorFormat(_format, _args);
-            debug.LogErrorFormat(_context, _format, _args);
+            debug.LogErrorFormat(format, args);
+            debug.LogErrorFormat(context, format, args);
 
-            debug.LogAssertionFormat(_format, _args);
-            debug.LogAssertionFormat(_context, _format, _args);
+            debug.LogAssertionFormat(format, args);
+            debug.LogAssertionFormat(context, format, args);
 
             Object.DestroyImmediate(debug);
         }

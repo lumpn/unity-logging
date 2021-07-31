@@ -7,10 +7,10 @@ namespace Lumpn.Logging
     [CreateAssetMenu(menuName = "Data/Debug Logger")]
     public sealed class DebugLogger : ScriptableObject
     {
-        [SerializeField] private string _tag;
-        [SerializeField] private LogType _filterLogType = LogType.Log;
+        [SerializeField] private string tag;
+        [SerializeField] private LogType filterLogType = LogType.Log;
 
-        private ILogger _unityLogger => Debug.unityLogger;
+        private ILogger unityLogger => Debug.unityLogger;
 
         [DebuggerHidden]
         public void Log(object message, Object context = null)
@@ -33,7 +33,7 @@ namespace Lumpn.Logging
         [DebuggerHidden]
         public void LogException(Exception exception, Object context = null)
         {
-            _unityLogger.LogException(exception, context);
+            unityLogger.LogException(exception, context);
         }
 
         [DebuggerHidden]
@@ -95,7 +95,7 @@ namespace Lumpn.Logging
         {
             if (IsLogTypeAllowed(logType))
             {
-                _unityLogger.Log(logType, _tag, message, context);
+                unityLogger.Log(logType, tag, message, context);
             }
         }
 
@@ -105,7 +105,7 @@ namespace Lumpn.Logging
             if (IsLogTypeAllowed(logType))
             {
                 var message = string.Format(format, args);
-                _unityLogger.Log(logType, _tag, message, context);
+                unityLogger.Log(logType, tag, message, context);
             }
         }
 
@@ -115,9 +115,9 @@ namespace Lumpn.Logging
             {
                 return true;
             }
-            if (_filterLogType != LogType.Exception)
+            if (filterLogType != LogType.Exception)
             {
-                return logType <= _filterLogType;
+                return logType <= filterLogType;
             }
             return false;
         }
