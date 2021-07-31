@@ -1,0 +1,19 @@
+{
+  "name": "de.lumpn.unity-logging",
+  "version": "1.0.0",
+  "displayName": "Lumpn Debug Logging",
+  "description": "Custom loggers that can be turned on/off individually.",
+  "dependencies": {
+    "com.unity.ext.nunit": "1.0.0"
+  },
+  "keywords": [
+    "lumpn",
+    "debug",
+    "logging",
+    "logger"
+  ],
+  "author": {
+    "name": "Jonas Boetel",
+    "url": "https://github.com/lumpn"
+  }
+}

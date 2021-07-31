@@ -1,0 +1,18 @@
+{
+    "name": "Lumpn.Logging.Editor.Tests",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2a0cee0fff402d84ea57e05881b4110c"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
