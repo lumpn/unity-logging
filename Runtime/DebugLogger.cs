@@ -1,3 +1,7 @@
+//----------------------------------------
+// MIT License
+// Copyright(c) 2020 Jonas Boetel
+//----------------------------------------
 using UnityEngine;
 using DebuggerHiddenAttribute = System.Diagnostics.DebuggerHiddenAttribute;
 using Exception = System.Exception;

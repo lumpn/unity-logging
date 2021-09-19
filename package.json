@@ -1,7 +1,7 @@
 {
   "name": "de.lumpn.unity-logging",
-  "version": "1.0.0",
-  "displayName": "Lumpn Debug Logging",
+  "version": "1.0.1",
+  "displayName": "Debug Logging",
   "description": "Custom loggers that can be turned on/off individually.",
   "dependencies": {
     "com.unity.ext.nunit": "1.0.0"
